@@ -57,6 +57,7 @@ func ConcurrentDownload(mp3List []*common.MP3, n int) {
 			success++
 			wg.Add(1)
 			go task.MP3.UpdateTag(wg)
+
 			break
 		case common.DownloadNoCopyrightError:
 			ignore++

@@ -1,5 +1,7 @@
 module github.com/winterssy/music-get
 
+go 1.16
+
 require (
 	github.com/bogem/id3v2 v1.1.1
 	github.com/fatih/color v1.7.0 // indirect

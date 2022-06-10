@@ -18,8 +18,10 @@ func main() {
 	}
 
 	url := flag.Args()[0]
+
 	req, err := handler.Parse(url)
 	if err != nil {
+
 		logger.Error.Fatal(err)
 	}
 

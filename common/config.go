@@ -4,16 +4,15 @@ import (
 	"flag"
 	"os"
 	"path/filepath"
-)
-
-const (
-	MaxConcurrentDownloadTasksNumber = 16
+	"runtime"
 )
 
 var (
 	MP3DownloadDir                   string
 	MP3DownloadBr                    int
 	MP3ConcurrentDownloadTasksNumber int
+	// get cpu cores number
+	MaxConcurrentDownloadTasksNumber = runtime.NumCPU()
 )
 
 func init() {
